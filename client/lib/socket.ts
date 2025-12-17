@@ -10,7 +10,7 @@ class SocketManager {
       // Get or create a unique socket ID for this browser tab
       const socketId = getOrCreateSocketId()
       
-      this.socket = io(process.env.NEXT_PUBLIC_SERVER_URL || "http://localhost:3001", {
+      this.socket = io(process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001", {
         autoConnect: true,
         reconnection: true,
         reconnectionAttempts: 5,
