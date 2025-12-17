@@ -3,9 +3,9 @@
 
 import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
-import { Button } from "@/client/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/client/components/ui/card"
-import { useGame } from "@/client/contexts/GameContext"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { useGame } from "@/contexts/GameContext"
 import type { Player, GameMode } from "../../types/game"
 
 interface LobbyViewProps {

@@ -4,8 +4,8 @@ import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
-import { AuthProvider, GameProvider } from "@/client/contexts"
-import { Toaster } from "@/client/components/ui/toaster"
+import { AuthProvider, GameProvider } from "@/contexts"
+import { Toaster } from "@/components/ui/toaster"
 import "./globals.css"
 
 export const metadata: Metadata = {

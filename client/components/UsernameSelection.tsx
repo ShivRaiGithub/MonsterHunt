@@ -1,9 +1,9 @@
 "use client"
 
 import React, { useState } from 'react'
-import { Button } from "@/client/components/ui/button"
-import { Input } from "@/client/components/ui/input"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/client/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
 interface UsernameSelectionProps {
   hiveAccount: string

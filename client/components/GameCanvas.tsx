@@ -1,8 +1,8 @@
 "use client"
 
-import { useGame } from "@/client/contexts/GameContext"
+import { useGame } from "@/contexts/GameContext"
 import { useEffect, useState } from "react"
-import { AtmosphericEffects } from "@/client/components/AtmosphericEffects"
+import { AtmosphericEffects } from "@/components/AtmosphericEffects"
 
 export function GameCanvas() {
   const { state } = useGame()

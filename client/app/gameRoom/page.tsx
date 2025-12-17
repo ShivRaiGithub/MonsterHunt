@@ -2,8 +2,8 @@
 
 import { useEffect, useState, Suspense } from "react"
 import { useSearchParams, useRouter } from "next/navigation"
-import { LobbyView } from "@/client/components/LobbyView"
-import { GameView } from "@/client/components/GameView"
+import { LobbyView } from "@/components/LobbyView"
+import { GameView } from "@/components/GameView"
 
 function GameRoomContent() {
   const searchParams = useSearchParams()

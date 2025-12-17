@@ -1,9 +1,9 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/client/components/ui/card"
-import { ScrollArea } from "@/client/components/ui/scroll-area"
-import { useGame } from "@/client/contexts/GameContext"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { ScrollArea } from "@/components/ui/scroll-area"
+import { useGame } from "@/contexts/GameContext"
 import type { MonsterAction } from "@/types/game"
 
 export function WolfReplayPanel() {

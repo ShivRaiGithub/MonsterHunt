@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect, useRef } from "react"
 import { useRouter } from "next/navigation"
-import { useAuth } from "@/client/contexts"
-import LoginCard from "@/client/components/LoginCard"
+import { useAuth } from "@/contexts"
+import LoginCard from "@/components/LoginCard"
 
 export default function Home() {
   const router = useRouter()

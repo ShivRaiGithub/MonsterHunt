@@ -2,13 +2,13 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { useAuth } from '@/client/contexts/AuthContext'
-import { useGame } from '@/client/contexts/GameContext'
-import { Button } from '@/client/components/ui/button'
-import { Input } from '@/client/components/ui/input'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/client/components/ui/card'
-import { Label } from '@/client/components/ui/label'
-import { useToast } from '@/client/hooks/use-toast'
+import { useAuth } from '@/contexts/AuthContext'
+import { useGame } from '@/contexts/GameContext'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Label } from '@/components/ui/label'
+import { useToast } from '@/hooks/use-toast'
 
 export default function RoomJoiner() {
   const router = useRouter()

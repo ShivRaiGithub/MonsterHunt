@@ -1,6 +1,6 @@
 import { io, type Socket } from "socket.io-client"
 import type { ClientToServerEvents, ServerToClientEvents } from "../../types/socket"
-import { getOrCreateSocketId } from "@/client/store/socketStore"
+import { getOrCreateSocketId } from "@/store/socketStore"
 
 class SocketManager {
   private socket: Socket<ServerToClientEvents, ClientToServerEvents> | null = null

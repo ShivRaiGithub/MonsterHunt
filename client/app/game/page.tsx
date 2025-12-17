@@ -2,12 +2,12 @@
 
 import React, { useEffect, useRef, useState } from "react"
 import { useRouter, useSearchParams } from "next/navigation"
-import { useAuth } from "@/client/contexts"
-import { Button } from "@/client/components/ui/button"
-import { Input } from "@/client/components/ui/input"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/client/components/ui/card"
-import PublicRooms from "@/client/components/PublicRooms"
-import PrivateRooms from "@/client/components/PrivateRooms"
+import { useAuth } from "@/contexts"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import PublicRooms from "@/components/PublicRooms"
+import PrivateRooms from "@/components/PrivateRooms"
 import type { GameMode } from "../../../types/game"
 
 export default function GamePage() {

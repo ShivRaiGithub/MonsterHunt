@@ -1,10 +1,10 @@
 "use client";
 
-import { useGame } from "@/client/contexts/GameContext";
-import { GameCanvas } from "@/client/components/GameCanvas";
-import { RightPanel } from "@/client/components/RightPanel";
-import { CombatFeedback } from "@/client/components/CombatFeedback";
-import { ConnectionStatus } from "@/client/components/ConnectionStatus";
+import { useGame } from "@/contexts/GameContext";
+import { GameCanvas } from "@/components/GameCanvas";
+import { RightPanel } from "@/components/RightPanel";
+import { CombatFeedback } from "@/components/CombatFeedback";
+import { ConnectionStatus } from "@/components/ConnectionStatus";
 import { ChatScreen } from "./InMatch/chatScreen";
 import { useEffect, useState } from "react";
 import type { GameEvent } from "../../types/game";

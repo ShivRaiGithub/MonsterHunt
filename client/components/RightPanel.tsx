@@ -1,13 +1,13 @@
 "use client"
 
-import { Button } from "@/client/components/ui/button"
-import { ScrollArea } from "@/client/components/ui/scroll-area"
-import { useGame } from "@/client/contexts/GameContext"
-import { MovementPanel } from "@/client/components/MovementPanel"
-import { RoleActionsPanel } from "@/client/components/RoleActionsPanel"
-import { VotingPanel } from "@/client/components/VotingPanel"
-import { WolfReplayPanel } from "@/client/components/MonsterReplayPanel"
-import { ChatScreen } from "@/client/components/InMatch/chatScreen"
+import { Button } from "@/components/ui/button"
+import { ScrollArea } from "@/components/ui/scroll-area"
+import { useGame } from "@/contexts/GameContext"
+import { MovementPanel } from "@/components/MovementPanel"
+import { RoleActionsPanel } from "@/components/RoleActionsPanel"
+import { VotingPanel } from "@/components/VotingPanel"
+import { WolfReplayPanel } from "@/components/MonsterReplayPanel"
+import { ChatScreen } from "@/components/InMatch/chatScreen"
 import { useEffect, useState } from "react"
 
 interface RightPanelProps {

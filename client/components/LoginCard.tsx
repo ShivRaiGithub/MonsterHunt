@@ -3,13 +3,13 @@
 
 import React, { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
-import { Button } from "@/client/components/ui/button"
-import { Input } from "@/client/components/ui/input"
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/client/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import type { GameMode } from "../../types/game"
-import { WalletManager, type WalletUser } from "@/client/lib/wallet"
+import { WalletManager, type WalletUser } from "@/lib/wallet"
 import UsernameSelection from "./UsernameSelection"
-import { useUserStore } from "@/client/store/userStore"
+import { useUserStore } from "@/store/userStore"
 
 type Props = {
   initialName?: string

@@ -1,5 +1,5 @@
 "use client"
-import { useGame } from "@/client/contexts/GameContext"
+import { useGame } from "@/contexts/GameContext"
 
 export function CombatFeedback() {
   const { state } = useGame()

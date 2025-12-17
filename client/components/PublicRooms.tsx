@@ -2,12 +2,12 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { useUserStore } from '@/client/store/userStore'
-import { useGame } from '@/client/contexts/GameContext'
-import { Button } from '@/client/components/ui/button'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/client/components/ui/card'
-import { Label } from '@/client/components/ui/label'
-import { useToast } from '@/client/hooks/use-toast'
+import { useUserStore } from '@/store/userStore'
+import { useGame } from '@/contexts/GameContext'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Label } from '@/components/ui/label'
+import { useToast } from '@/hooks/use-toast'
 
 export default function PublicRooms() {
   const router = useRouter()

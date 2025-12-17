@@ -1,9 +1,9 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Button } from "@/client/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/client/components/ui/card"
-import { useGame } from "@/client/contexts/GameContext"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { useGame } from "@/contexts/GameContext"
 
 export function MovementPanel() {
   const { state, actions } = useGame()

@@ -2,12 +2,12 @@
 
 import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { useUserStore } from '@/client/store/userStore'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/client/components/ui/card'
-import { Button } from '@/client/components/ui/button'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/client/components/ui/tabs'
-import { WalletManager } from '@/client/lib/wallet'
-import { useToast } from '@/client/hooks/use-toast'
+import { useUserStore } from '@/store/userStore'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { WalletManager } from '@/lib/wallet'
+import { useToast } from '@/hooks/use-toast'
 
 interface Match {
   _id: string

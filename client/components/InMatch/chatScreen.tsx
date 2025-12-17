@@ -6,11 +6,11 @@ import {
   CardContent,
   CardHeader,
   CardTitle,
-} from "@/client/components/ui/card";
-import { Input } from "@/client/components/ui/input";
-import { Button } from "@/client/components/ui/button";
-import { ScrollArea } from "@/client/components/ui/scroll-area";
-import { useGame } from "@/client/contexts/GameContext";
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { useGame } from "@/contexts/GameContext";
 
 export function ChatScreen() {
   const { state, actions } = useGame();

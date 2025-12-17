@@ -2,7 +2,7 @@
 
 import type React from "react"
 import { createContext, useContext, useReducer, useEffect, type ReactNode } from "react"
-import { socketManager } from "@/client/lib/socket"
+import { socketManager } from "@/lib/socket"
 import type { GameState, Player, GamePhase, BackgroundType, CombatResult, MonsterAction, GameEvent, GameMode } from "../../types/game"
 import type { Socket } from "socket.io-client"
 import type { ServerToClientEvents, ClientToServerEvents } from "../../types/socket"
