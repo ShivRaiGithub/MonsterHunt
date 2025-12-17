@@ -94,25 +94,6 @@ export default function GamePage() {
     }
   }, [])
 
-  const handleEnableTap = async () => {
-    // user tapped to enable ambience after autoplay blocked
-    setEnabling(true)
-    try {
-      if (!ambienceRef.current) {
-        ambienceRef.current = new Audio("/audio/ambience_loop.mp3")
-        ambienceRef.current.loop = true
-        ambienceRef.current.preload = "auto"
-        ambienceRef.current.volume = 0.45
-      }
-      await ambienceRef.current.play()
-      setNeedEnable(false)
-    } catch {
-      // if still can't play (rare), keep showing prompt
-      setNeedEnable(true)
-    } finally {
-      setEnabling(false)
-    }
-  }
 
   const handleLogout = () => {
     try {
@@ -295,26 +276,6 @@ export default function GamePage() {
       <div className="absolute left-0 right-0 bottom-0 z-10 pointer-events-none">
         <div className="fog-layer h-44 md:h-64 w-full" aria-hidden />
       </div>
-
-      {/* Tap-to-enable overlay (only when autoplay blocked and audio not muted) */}
-      {needEnable && (
-        <div className="fixed inset-0 z-40 flex items-end md:items-center justify-center p-6">
-          <div className="absolute inset-0 bg-black/75" onClick={() => { /* keep it modal */ }} />
-          <div className="relative z-50 w-full max-w-sm p-6 rounded-lg parchment-bg text-center">
-            <div className="text-lg font-semibold text-fantasy-gold">Tap to enable ambience</div>
-            <div className="text-xs text-fantasy-moonlight mt-2">Tap to allow the game's ambient soundscape.</div>
-            <div className="mt-4 flex justify-center">
-              <button
-                onClick={handleEnableTap}
-                disabled={enabling}
-                className="px-4 py-2 rounded bg-fantasy-gold text-black btn-fantasy"
-              >
-                {enabling ? "Enabling..." : "Enable Ambience"}
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* vignette / heartbeat flash */}
       <div className={`fixed inset-0 z-40 pointer-events-none transition-opacity ${showVignette ? "vignette-active" : "vignette-hidden"}`} />

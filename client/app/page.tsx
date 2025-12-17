@@ -182,25 +182,6 @@ export default function Home() {
         </div>
       )}
 
-      {/* Tap-to-enable overlay */}
-      {needEnable && (
-        <div className="fixed inset-0 z-40 flex items-end md:items-center justify-center p-6">
-          <div className="absolute inset-0 bg-black/75" onClick={() => { /* keep it modal */ }} />
-          <div className="relative z-50 w-full max-w-sm p-6 rounded-lg parchment-bg text-center">
-            <div className="text-lg font-semibold text-fantasy-gold">Tap to enable ambience</div>
-            <div className="text-xs text-fantasy-moonlight mt-2">Tap to allow the game's ambient soundscape.</div>
-            <div className="mt-4 flex justify-center">
-              <button
-                onClick={handleEnableTap}
-                disabled={enabling}
-                className="px-4 py-2 rounded bg-fantasy-gold text-black btn-fantasy"
-              >
-                {enabling ? "Enabling..." : "Enable Ambience"}
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   )
 }

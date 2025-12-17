@@ -22,9 +22,25 @@ connectDB()
 // Middleware
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+
+// CORS configuration
+const allowedOrigins = [
+  "https://monster-hunt-seven.vercel.app",
+  process.env.CLIENT_URL
+].filter(Boolean)
+
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || "http://localhost:3000",
+    origin: (origin, callback) => {
+      // Allow requests with no origin (like mobile apps or curl requests)
+      if (!origin) return callback(null, true)
+      
+      if (allowedOrigins.indexOf(origin) !== -1) {
+        callback(null, true)
+      } else {
+        callback(new Error('Not allowed by CORS'))
+      }
+    },
     credentials: true,
   }),
 )
@@ -36,7 +52,7 @@ app.use("/api/shop", shopRoutes)
 
 const io = new Server<ClientToServerEvents, ServerToClientEvents>(httpServer, {
   cors: {
-    origin: process.env.CLIENT_URL || "http://localhost:3000",
+    origin: allowedOrigins,
     methods: ["GET", "POST"],
     credentials: true,
   },

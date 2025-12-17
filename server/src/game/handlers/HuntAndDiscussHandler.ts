@@ -491,7 +491,7 @@ export class HuntAndDiscussHandler extends BaseGameHandler {
     const alivePlayers = Object.values(this.gameState.players).filter((p) => p.isAlive)
     const majority = Math.floor(alivePlayers.length / 2) + 1
 
-    if (eliminatedId && maxVotes >= majority) {
+    if (eliminatedId && maxVotes >= majority && this.gameState.players[eliminatedId]) {
       this.gameState.players[eliminatedId].isAlive = false
       this.io.to(this.roomId).emit("vote:result", eliminatedId)
 
