@@ -1,0 +1,432 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+  --radius: 0.625rem;
+}
+
+/* Enhanced fantasy-themed custom colors */
+:root {
+  --fantasy-gold: oklch(0.8 0.15 85);
+  --fantasy-amber: oklch(0.7 0.2 70);
+  --fantasy-crimson: oklch(0.5 0.25 25);
+  --fantasy-forest: oklch(0.3 0.1 140);
+  --fantasy-moonlight: oklch(0.9 0.05 240);
+  --fantasy-shadow: oklch(0.1 0.02 260);
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Enhanced fantasy color utilities */
+  --color-fantasy-gold: var(--fantasy-gold);
+  --color-fantasy-amber: var(--fantasy-amber);
+  --color-fantasy-crimson: var(--fantasy-crimson);
+  --color-fantasy-forest: var(--fantasy-forest);
+  --color-fantasy-moonlight: var(--fantasy-moonlight);
+  --color-fantasy-shadow: var(--fantasy-shadow);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Enhanced fantasy UI styling classes */
+@layer utilities {
+  .fantasy-glow {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3), 0 0 40px rgba(255, 215, 0, 0.1);
+  }
+
+  .fantasy-border {
+    border: 2px solid;
+    border-image: linear-gradient(45deg, var(--fantasy-gold), var(--fantasy-amber)) 1;
+  }
+
+  .parchment-bg {
+    background: linear-gradient(135deg, oklch(0.2 0.05 45) 0%, oklch(0.15 0.03 35) 100%);
+    border: 1px solid var(--fantasy-gold);
+    backdrop-filter: blur(10px);
+  }
+
+  .runic-text {
+    text-shadow: 0 0 10px var(--fantasy-moonlight), 0 0 20px var(--fantasy-moonlight);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+
+  .mystical-glow {
+    box-shadow: 0 0 5px var(--fantasy-moonlight), 0 0 10px var(--fantasy-moonlight), 0 0 15px var(--fantasy-moonlight);
+  }
+
+  .combat-flash {
+    animation: combat-flash 0.5s ease-in-out;
+  }
+
+  .phase-transition {
+    animation: phase-transition 2s ease-in-out;
+  }
+}
+
+/* Enhanced animations */
+@layer components {
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px) rotate(0deg);
+      opacity: 0.7;
+    }
+    25% {
+      transform: translateY(-10px) rotate(90deg);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(-5px) rotate(180deg);
+      opacity: 0.8;
+    }
+    75% {
+      transform: translateY(-15px) rotate(270deg);
+      opacity: 1;
+    }
+  }
+
+  @keyframes combat-flash {
+    0% {
+      background-color: transparent;
+    }
+    50% {
+      background-color: rgba(239, 68, 68, 0.3);
+    }
+    100% {
+      background-color: transparent;
+    }
+  }
+
+  @keyframes phase-transition {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.05);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes mystical-pulse {
+    0%,
+    100% {
+      opacity: 0.6;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+  }
+
+  .animate-float {
+    animation: float 8s ease-in-out infinite;
+  }
+
+  .animate-mystical-pulse {
+    animation: mystical-pulse 3s ease-in-out infinite;
+  }
+
+  /* Smooth transitions for all interactive elements */
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+  }
+
+  /* Enhanced button hover effects */
+  .btn-fantasy {
+    @apply transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
+  }
+
+  /* Responsive text scaling */
+  @media (max-width: 768px) {
+    .runic-text {
+      font-size: clamp(1.5rem, 4vw, 3rem);
+    }
+  }
+}
+
+/* Scrollbar styling for fantasy theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--fantasy-shadow);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--fantasy-gold);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--fantasy-amber);
+}
+
+.modal-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: phase-transition 300ms ease;
+}
+
+/* Card pop-in for modal */
+.modal-card {
+  transform-origin: center;
+  animation: phase-transition 380ms cubic-bezier(.2,.9,.2,1);
+}
+
+/* Slight shimmer for trailer image */
+.trailer-thumb {
+  background-position: center;
+  background-size: cover;
+  filter: saturate(0.95) contrast(0.9);
+  transition: transform 300ms ease, box-shadow 300ms ease;
+}
+.trailer-thumb:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* subtle backdrop for hero cards */
+.hero-card-bg {
+  background: linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.15));
+  border: 1px solid rgba(212,175,55,0.12);
+}
+
+html, body {
+  -ms-overflow-style: none; /* IE 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* --- Tap-to-enable prompt styling --- */
+.parchment-bg {
+  background: linear-gradient(135deg, rgba(8,8,8,0.6), rgba(12,12,12,0.4));
+  border: 1px solid rgba(212,175,55,0.12);
+  backdrop-filter: blur(6px);
+}
+
+/* Vignette / heartbeat flash effect */
+.vignette-hidden {
+  opacity: 0;
+  transition: opacity 220ms ease;
+  pointer-events: none;
+}
+
+.vignette-active {
+  opacity: 1;
+  transition: opacity 220ms ease;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.55) 60%, rgba(0,0,0,0.9) 100%);
+  animation: heartbeat-flash 700ms ease-out;
+}
+
+/* subtle pulse timed with heartbeat */
+@keyframes heartbeat-flash {
+  0% { opacity: 0; transform: scale(1); filter: blur(0px); }
+  20% { opacity: 0.9; transform: scale(1.02); filter: blur(1px); }
+  60% { opacity: 0.6; transform: scale(1.01); filter: blur(0.5px); }
+  100% { opacity: 0; transform: scale(1); filter: blur(0px); }
+}
+
+/* Slight adjustment for tap prompt box on small screens */
+@media (max-width: 640px) {
+  .parchment-bg { padding: 14px; }
+}
+
+/* ---- Fog quick fix: ensure fog sits above the dark overlay but under UI ---- */
+
+/* make sure background overlay is below fog: */
+.page-bg-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 5; /* background darkening */
+  pointer-events: none;
+  background: rgba(0,0,0,0.60);
+}
+
+/* fog layer sits above overlay but below UI (UI card uses z-20 in code) */
+.fog-layer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 12;
+  pointer-events: none;
+  height: 22rem;
+  overflow: visible;
+  opacity: 1;
+}
+
+/* Create realistic smoky fog with multiple radial gradients */
+.fog-layer::before,
+.fog-layer::after {
+  content: "";
+  position: absolute;
+  left: -30%;
+  bottom: -20%;
+  width: 160%;
+  height: 160%;
+  filter: blur(45px);
+  will-change: transform, opacity;
+}
+
+/* First fog layer - larger wisps */
+.fog-layer::before {
+  background: 
+    radial-gradient(ellipse 500px 220px at 20% 65%, rgba(255,255,255,0.22), transparent 65%),
+    radial-gradient(ellipse 450px 200px at 60% 75%, rgba(250,250,255,0.18), transparent 65%),
+    radial-gradient(ellipse 520px 230px at 90% 70%, rgba(255,255,255,0.2), transparent 65%),
+    radial-gradient(ellipse 400px 180px at 40% 80%, rgba(245,245,255,0.16), transparent 65%);
+  animation: fog-drift-1 20s ease-in-out infinite;
+  mix-blend-mode: screen;
+}
+
+/* Second fog layer - smaller, more dynamic wisps */
+.fog-layer::after {
+  background: 
+    radial-gradient(ellipse 420px 190px at 30% 70%, rgba(255,255,255,0.2), transparent 60%),
+    radial-gradient(ellipse 380px 170px at 70% 80%, rgba(250,250,255,0.17), transparent 60%),
+    radial-gradient(ellipse 460px 210px at 50% 65%, rgba(255,255,255,0.19), transparent 60%),
+    radial-gradient(ellipse 340px 160px at 85% 75%, rgba(245,245,255,0.15), transparent 60%);
+  animation: fog-drift-2 28s ease-in-out infinite;
+  mix-blend-mode: screen;
+  animation-delay: -10s;
+}
+
+/* Smooth, organic drifting motion with more visible movement */
+@keyframes fog-drift-1 {
+  0% { 
+    transform: translateX(-8%) translateY(2%) rotate(-2deg) scale(0.98);
+    opacity: 0.8;
+  }
+  25% {
+    transform: translateX(-2%) translateY(-3%) rotate(1deg) scale(1.05);
+    opacity: 1;
+  }
+  50% { 
+    transform: translateX(6%) translateY(1%) rotate(2deg) scale(1.12);
+    opacity: 0.85;
+  }
+  75% {
+    transform: translateX(3%) translateY(4%) rotate(-1deg) scale(1.06);
+    opacity: 0.95;
+  }
+  100% { 
+    transform: translateX(-8%) translateY(2%) rotate(-2deg) scale(0.98);
+    opacity: 0.8;
+  }
+}
+
+@keyframes fog-drift-2 {
+  0% { 
+    transform: translateX(5%) translateY(-2%) rotate(2deg) scale(1.02);
+    opacity: 0.75;
+  }
+  30% {
+    transform: translateX(-6%) translateY(3%) rotate(-2deg) scale(1.1);
+    opacity: 0.9;
+  }
+  60% { 
+    transform: translateX(-12%) translateY(-1%) rotate(1deg) scale(1.15);
+    opacity: 0.8;
+  }
+  85% {
+    transform: translateX(-4%) translateY(5%) rotate(2deg) scale(1.08);
+    opacity: 0.85;
+  }
+  100% { 
+    transform: translateX(5%) translateY(-2%) rotate(2deg) scale(1.02);
+    opacity: 0.75;
+  }
+}
